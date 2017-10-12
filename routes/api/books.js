@@ -13,4 +13,7 @@ router
   .put(booksController.update)
   .delete(booksController.remove);
 
+router.route("/fetch")
+  .get(booksController.fetch);
+
 module.exports = router;

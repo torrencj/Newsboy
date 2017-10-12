@@ -17,4 +17,9 @@ export default {
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
   }
+  ,
+  // Fetch books from api
+  fetchBooks: function() {
+    return axios.get("https://api.nytimes.com/svc/topstories/v2/home.json&api-key=21fc1980c81e408891eb4b4709324562");
+  }
 };
