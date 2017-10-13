@@ -20,6 +20,8 @@ export default {
   ,
   // Fetch books from api
   fetchBooks: function() {
-    return axios.get("https://api.nytimes.com/svc/topstories/v2/home.json&api-key=21fc1980c81e408891eb4b4709324562");
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
+    return axios.get(proxyurl + "https://api.nytimes.com/svc/topstories/v2/home.json&api-key=21fc1980c81e408891eb4b4709324562");
   }
 };
